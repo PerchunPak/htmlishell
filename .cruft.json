@@ -1,0 +1,21 @@
+{
+  "template": "https://github.com/PerchunPak/python-template",
+  "commit": "25afc0824147df8bb1168d209d41de42efb58b98",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "bash-react",
+      "organization": "PerchunPak",
+      "project_description": "React-ish bash dialect.",
+      "other_languages_support": "n",
+      "ukrainian_language_support": "n",
+      "russian_language_support": "n",
+      "license": "MIT",
+      "_copy_without_render": [
+        "docs/_autoapi_templates/python"
+      ],
+      "_template": "https://github.com/PerchunPak/python-template"
+    }
+  },
+  "directory": null
+}
