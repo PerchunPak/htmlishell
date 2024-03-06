@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "htmlishell"
-description = "React-ish bash dialect."
+description = "A super simple HTML to bash compiler."
 version = "0.1.0.post1"
 license = "MIT"
 authors = []
