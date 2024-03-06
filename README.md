@@ -3,21 +3,77 @@
 [![Support Ukraine](https://badgen.net/badge/support/UKRAINE/?color=0057B8&labelColor=FFD700)](https://www.gov.uk/government/news/ukraine-what-you-can-do-to-help)
 
 [![Build Status](https://github.com/PerchunPak/bash-react/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/PerchunPak/bash-react/actions?query=workflow%3Atest)
-[![Documentation Build Status](https://readthedocs.org/projects/bash-react/badge/?version=latest)](https://bash-react.readthedocs.io/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Python support versions badge (from pypi)](https://img.shields.io/pypi/pyversions/bash-react)](https://www.python.org/downloads/)
 
-React-ish bash dialect.
+A super simple HTML to bash compiler, inspired by [this moment](https://youtu.be/mokGJiXVw_4?t=1384).
 
-## Features
+```
+htmlishell
+ |  |^^^^^
+ |  \because with sh it didn't sound
+ \   what Primagen likes
+  I hate JS so much so I won't do react, but rather just html   
+```
 
-- Free! We don't want any money from you!
-- Add yours!
+## Examples
+
+I am too dumb (and lazy too) to do all the bash spec, so I just did a few features.
+
+### Simple `ls`
+
+```html
+<ls />
+```
+
+Transforms into
+
+```bash
+ls
+```
+
+### `ls` with arguments
+
+```html
+<ls>
+  <all />
+</ls>
+```
+
+Transforms into
+
+```bash
+ls --all
+```
+
+### `ls` with short arguments
+
+```html
+<ls>
+  <all />
+  <l short=true />
+</ls>
+```
+
+Transforms into
+
+```bash
+ls --all -l
+```
 
 ## Installing
 
+Do not use `pip` for Python packages (see [this](https://packaging.python.org/en/latest/specifications/externally-managed-environments/#externally-managed-environments)).
+TLDR: not venv-wide `pip` installation may break your system, use [`pipx`](https://pipx.pypa.io/stable/installation/) (it will manage venvs for you).
+
 ```bash
-pip install bash-react
+pipx install bash-react
+```
+
+Then run
+
+```bash
+htmlishell ./path/to/your/file.html
 ```
 
 ## Installing for local developing
@@ -46,36 +102,12 @@ If you use Windows, open PowerShell with admin privileges and use:
 ### Installing dependencies
 
 ```bash
-poetry install --no-dev
+poetry install
 ```
-
-### Configuration
-
-All configuration happens in `config.yml`, or with enviroment variables.
 
 ### If something is not clear
 
-You can always write me!
-
-## Example
-
-```py
-from bash_react.example import some_function
-
-print(some_function(3, 4))
-# => 7
-```
-
-## Updating
-
-```bash
-pip install -U bash-react
-```
-
-### For local development
-
-For updating, just re-download repository (do not forget save config),
-if you used `git` for downloading, just run `git pull`.
+You can always write to me!
 
 ## Thanks
 
