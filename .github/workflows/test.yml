@@ -52,7 +52,7 @@ jobs:
       run: |
         poetry run python .github/commit_and_push.py \
           --token ${{ secrets.GITHUB_TOKEN }} \
-          PerchunPak/bash-react \
+          PerchunPak/htmlishell \
           ${{ github.head_ref || github.ref_name }} \
           "Apply codestyle :pencil2:"
 
@@ -64,7 +64,7 @@ jobs:
       run: |
         poetry run python .github/commit_and_push.py \
           --token ${{ secrets.GITHUB_TOKEN }} \
-          PerchunPak/bash-react \
+          PerchunPak/htmlishell \
           ${{ github.head_ref || github.ref_name }} \
           "Update poetry.lock :chart_with_upwards_trend:"
 
@@ -113,6 +113,6 @@ jobs:
       run: |
         poetry run python .github/commit_and_push.py \
           --token ${{ secrets.GITHUB_TOKEN }} \
-          PerchunPak/bash-react \
+          PerchunPak/htmlishell \
           ${{ github.head_ref || github.ref_name }} \
           "Bump template :rocket:"

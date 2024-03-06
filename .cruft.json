@@ -4,7 +4,7 @@
   "checkout": null,
   "context": {
     "cookiecutter": {
-      "project_name": "bash-react",
+      "project_name": "htmlishell",
       "organization": "PerchunPak",
       "project_description": "React-ish bash dialect.",
       "other_languages_support": "n",

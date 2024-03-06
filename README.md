@@ -1,10 +1,10 @@
-# bash-react
+# htmlishell
 
 [![Support Ukraine](https://badgen.net/badge/support/UKRAINE/?color=0057B8&labelColor=FFD700)](https://www.gov.uk/government/news/ukraine-what-you-can-do-to-help)
 
-[![Build Status](https://github.com/PerchunPak/bash-react/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/PerchunPak/bash-react/actions?query=workflow%3Atest)
+[![Build Status](https://github.com/PerchunPak/htmlishell/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/PerchunPak/htmlishell/actions?query=workflow%3Atest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Python support versions badge (from pypi)](https://img.shields.io/pypi/pyversions/bash-react)](https://www.python.org/downloads/)
+[![Python support versions badge (from pypi)](https://img.shields.io/pypi/pyversions/htmlishell)](https://www.python.org/downloads/)
 
 A super simple HTML to bash compiler, inspired by [this moment](https://youtu.be/mokGJiXVw_4?t=1384).
 
@@ -67,7 +67,7 @@ Do not use `pip` for Python packages (see [this](https://packaging.python.org/en
 TLDR: not venv-wide `pip` installation may break your system, use [`pipx`](https://pipx.pypa.io/stable/installation/) (it will manage venvs for you).
 
 ```bash
-pipx install bash-react
+pipx install htmlishell
 ```
 
 Then run
@@ -79,8 +79,8 @@ htmlishell ./path/to/your/file.html
 ## Installing for local developing
 
 ```bash
-git clone https://github.com/PerchunPak/bash-react.git
-cd bash-react
+git clone https://github.com/PerchunPak/htmlishell.git
+cd htmlishell
 ```
 
 ### Installing `poetry`
