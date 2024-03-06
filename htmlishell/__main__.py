@@ -1,6 +1,7 @@
-import sys
 import pathlib
 import subprocess
+import sys
+
 from htmlishell.parsing import Parser
 
 

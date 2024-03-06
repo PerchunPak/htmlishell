@@ -24,9 +24,9 @@ class Parser:
         return result.strip()
 
     def _parse_command(self, command: Tag) -> str:
-        return "\n" + command.name
+        return "\n" + command.name  # type: ignore[no-any-return] # lol idc
 
     def _parse_argument(self, argument: Tag) -> str:
         if argument.get_attribute_list("short")[0] == "true":
-            return " -" + argument.name
-        return " --" + argument.name
+            return " -" + argument.name  # type: ignore[no-any-return] # lol idc
+        return " --" + argument.name  # type: ignore[no-any-return] # lol idc
