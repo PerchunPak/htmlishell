@@ -3,14 +3,22 @@ name: Deploy to pypi.org
 on:
   push:
     tags:
-      - v*.*.*
-  workflow_dispatch:
+      # This pattern is not a typical regular expression, see:
+      # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+      - "v*"
+
+permissions:
+  id-token: write # Used to authenticate to PyPI via OIDC.
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: release
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup poetry
         id: poetry_setup
@@ -19,6 +27,9 @@ jobs:
           python-version: 3.12
           install-args: --only main --sync
 
-      - name: Build and push
-        run: |
-          poetry publish --build --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }}
+      - name: Build package
+        run: poetry build
+
+      # This uses PyPI's trusted publishing, so no token is required
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
