@@ -8,7 +8,11 @@ from htmlishell.parsing import Parser
 
 def main(file_to_read: t.Optional[str] = None) -> None:
     if file_to_read is None:
-        file_to_read = sys.argv[1]
+        try:
+            file_to_read = sys.argv[1]
+        except IndexError:
+            print("Please provide file to read from!")
+            return
 
     file_path = pathlib.Path(file_to_read)
     result = Parser.parse(file_path.read_text())
